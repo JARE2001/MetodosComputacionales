@@ -18,12 +18,11 @@ class AutomataEntero:
         if(c.isdigit()):
             self.state = 2
         else:
-            self.state = -1
+            self.state = -2
 
     def processEntry(self,cadena,i):
-        estadoI =i+1
-        while(not self.state == -1 and i < len(cadena)):
-            print(self.state)
+        self.__init__()
+        while(not self.state == -2 and not self.state == -1 and i < len(cadena)):
             if (self.state == 0):
                 self.state0(cadena[i])
             elif (self.state == 1):
@@ -31,10 +30,9 @@ class AutomataEntero:
             elif (self.state == 2):
                 self.state2(cadena[i]) 
             i+=1    
-        if(i <= estadoI):
-            print("La cadena no contiene un entero")
+        if(self.state == 2 ):
+            return i
+        elif(self.state == -2):
+            return i-1
         else:
-            print(cadena[0:i-1])
-            print("La cadena contine un entero")
-        self.state = 0
-        return i-1
+            return -1
