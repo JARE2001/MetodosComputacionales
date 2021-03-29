@@ -11,9 +11,15 @@ Para Ejecutar:
 La fucnion principal se llama:  lexerAritmetico
 
 esta llama a el metodo processEntry de cada automata:
+    los automatas se encuetran en:
+    Enteros <<  AEnteros.py
+    Reales  <<  AReales.py
+    Variables  <<  AVariables.py
+    Comentarios  <<  Acomentarios.py
 
-los automatas se encuetran en:
-Enteros <<  AEnteros.py
-Reales  <<  AReales.py
-Variables  <<  AVariables.py
-Comentarios  <<  Acomentarios.py
+Diagramas:
+    Enteros.png
+    Reales.png 
+    Variables.png
+    Comentarios.png
+
